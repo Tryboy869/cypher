@@ -52,7 +52,7 @@ pip install -e .
 ### Hello World
 
 ```cypher
-# hello.cypher
+# hello.cy
 
 # Create a button with content / Créer un bouton avec contenu
 A(button);G("Hello CYPHER!");T(primary):
@@ -64,7 +64,7 @@ L(life):
 
 Run it / Exécutez-le:
 ```bash
-cypher run hello.cypher
+cypher run hello.cy
 ```
 
 Output / Sortie:
@@ -159,16 +159,16 @@ L(life):
 
 ```bash
 # Run CYPHER file / Exécuter fichier CYPHER
-cypher run app.cypher
+cypher run app.cy
 
 # Compile to bytecode / Compiler en bytecode
-cypher build app.cypher
+cypher build app.cy
 
 # Generate web output / Générer sortie web
-cypher run app.cypher web
+cypher run app.cy web
 
 # Generate Rust code / Générer code Rust
-cypher run app.cypher rust
+cypher run app.cy rust
 
 # Show version / Afficher version
 cypher version
@@ -202,7 +202,7 @@ cypher version
 docker build -t cypher:0.1.0 .
 
 # Run CYPHER file / Exécuter fichier CYPHER
-docker run -v $(pwd)/app.cypher:/app.cypher cypher:0.1.0 run /app.cypher
+docker run -v $(pwd)/app.cy:/app.cy cypher:0.1.0 run /app.cy
 
 # Interactive mode / Mode interactif
 docker run -it cypher:0.1.0
