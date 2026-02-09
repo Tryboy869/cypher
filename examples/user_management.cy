@@ -1,0 +1,12 @@
+# User Management System
+A(user)
+G(user;name:Alice;email:alice@example.com;age:25)
+C(user;database)
+T(user;validate:email)
+T(user;validate:age)
+I(user;age >= 18)
+G(user;status:approved)
+J(user;end)
+G(user;status:rejected)
+F(user;fixed)
+L(user;life)

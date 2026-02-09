@@ -1,0 +1,6 @@
+include README.md
+include README.fr.md
+include LICENSE
+include cypher.py
+recursive-include docs *
+recursive-include examples *.cy

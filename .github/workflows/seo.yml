@@ -1,0 +1,48 @@
+name: SEO Optimization
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly
+
+jobs:
+  update-topics:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Update repository topics
+      uses: actions/github-script@v6
+      with:
+        script: |
+          github.rest.repos.replaceAllTopics({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            names: [
+              'programming-language',
+              'compiler',
+              'interpreter',
+              'minimalist',
+              'python',
+              'bio-inspired',
+              'hardware-abstraction',
+              'multi-context',
+              'cypher',
+              'low-code'
+            ]
+          })
+  
+  update-description:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Update repository description
+      uses: actions/github-script@v6
+      with:
+        script: |
+          github.rest.repos.update({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            description: '🧬 Minimalist programming language with 8 primitives | Auto hardware optimization | Multi-context generation',
+            homepage: 'https://github.com/tryboy869/cypher'
+          })

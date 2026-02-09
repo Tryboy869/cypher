@@ -1,0 +1,13 @@
+# Web Application Dashboard
+A(dashboard)
+G(dashboard;title:Analytics Dashboard)
+T(dashboard;layout:grid)
+A(header)
+G(header;text:My Dashboard;size:2xl)
+A(metric_card)
+G(metric_card;label:Users;value:1234;color:blue)
+A(metric_card)
+G(metric_card;label:Revenue;value:$45k;color:green)
+C(dashboard;api)
+F(dashboard;fixed)
+L(dashboard;life)
